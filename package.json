@@ -32,5 +32,8 @@
     "eslint-config-next": "14.2.33",
     "sass": "^1.77.0",
     "typescript": "^5"
+  },
+  "overrides": {
+    "glob": "^10.4.7"
   }
 }
