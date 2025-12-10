@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../public/styles/style.scss";
+import "@/public/styles/style.scss";
 import InitAnimations from "@/components/layout/InitAnimations";
 
 export const metadata: Metadata = {
