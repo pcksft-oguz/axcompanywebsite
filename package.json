@@ -11,7 +11,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
-    "next": "14.2.3",
+    "next": "14.2.33",
     "react": "^18",
     "react-animate-height": "^3.2.3",
     "react-dom": "^18",
@@ -29,7 +29,7 @@
     "@types/react-dom": "^18",
     "@types/react-modal-video": "^1.2.3",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "14.2.33",
     "sass": "^1.77.0",
     "typescript": "^5"
   }
