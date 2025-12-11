@@ -112,13 +112,6 @@ const About = () => {
                   Explore More{" "}
                   <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
-                <div className="d-flex gap-2 align-items-center">
-                  <Image src={Six} alt="Image" priority />
-                  <div className="info">
-                    <h5>Ronald Richards</h5>
-                    <span className="sm-font">Co, Founder</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
