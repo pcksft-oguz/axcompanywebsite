@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Line from "@/public/images/shape/about-line.png";
 import One from "@/public/images/about/about-image1.jpg";
-import Two from "@/public/images/about/about-image2.png";
+import Two from "@/public/images/about/about-image2.jpg";
 import Circle from "@/public/images/shape/about-circle.png";
 import Three from "@/public/images/icon/section-title.png";
 import Four from "@/public/images/icon/about-icon1.png";
