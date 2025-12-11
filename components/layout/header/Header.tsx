@@ -26,23 +26,8 @@ const Header = () => {
     };
   }, []);
 
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 200) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // keep header static; disable hide-on-scroll behavior
+  const scrolled = false;
 
   // search toggle
   const [searchToggle, setSearchToggle] = useState(false);
