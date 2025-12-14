@@ -116,45 +116,6 @@ const Footer = () => {
             </ul>
           </div>
           <div
-            className="footer__item item-sm "
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-duration="1500"
-          >
-            <h3 className="footer-title">Quick Link</h3>
-            <ul>
-              <li>
-                <Link href="about">
-                  <i className="fa-regular fa-angles-right me-1"></i> About
-                  AX Company
-                </Link>
-              </li>
-              <li>
-                <Link href="service">
-                  <i className="fa-regular fa-angles-right me-1"></i> Our
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="pricing">
-                  <i className="fa-regular fa-angles-right me-1"></i> Pricing
-                  Plan
-                </Link>
-              </li>
-              <li>
-                <Link href="case">
-                  <i className="fa-regular fa-angles-right me-1"></i> Our
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="team">
-                  <i className="fa-regular fa-angles-right me-1"></i> Our Team
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div
             className="footer__item item-big "
             data-aos="fade-up"
             data-aos-delay="600"
@@ -165,13 +126,6 @@ const Footer = () => {
               Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates
             </p>
             <ul className="footer-contact">
-              <li>
-                <i className="fa-regular fa-clock"></i>
-                <div className="info">
-                  <h5>Opening Hours:</h5>
-                  <p>Mon - Sat: 10.00 AM - 4.00 PM</p>
-                </div>
-              </li>
               <li>
                 <i className="fa-duotone fa-phone"></i>
                 <div className="info">

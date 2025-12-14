@@ -59,7 +59,7 @@ const About = () => {
                   data-aos-delay="200"
                   data-aos-duration="1500"
                 >
-                  Pioneering AI & Data Science Solutions for Tomorrow
+                  Leading the Future of AI & Data Science Innovation
                 </h2>
                 <p
                   className=""
@@ -67,10 +67,10 @@ const About = () => {
                   data-aos-delay="400"
                   data-aos-duration="1500"
                 >
-                  We are a leading Data Science and AI company specializing in Machine Learning, 
-                  predictive analytics, and intelligent automation. Our expert team transforms complex 
-                  data into actionable insights, helping businesses make data-driven decisions and 
-                  achieve competitive advantages through cutting-edge AI technologies.
+                  We are a premier Data Science and Artificial Intelligence company, specializing in advanced Machine Learning, 
+                  sophisticated predictive analytics, and intelligent automation systems. Our world-class team of data scientists 
+                  and AI engineers transforms complex data ecosystems into strategic competitive advantages, empowering businesses 
+                  to make data-driven decisions that drive unprecedented growth and innovation.
                 </p>
               </div>
               <div
@@ -85,8 +85,8 @@ const About = () => {
                       <Image src={Four} alt="icon" priority />
                     </div>
                     <div className="content">
-                      <h4 className="mb-1">Expert Team</h4>
-                      <p>Data scientists and AI engineers with proven expertise</p>
+                      <h4 className="mb-1">World-Class Experts</h4>
+                      <p>Elite data scientists and AI engineers with industry-leading expertise</p>
                     </div>
                   </div>
                 </div>
@@ -96,8 +96,8 @@ const About = () => {
                       <Image src={Five} alt="icon" priority />
                     </div>
                     <div className="content">
-                      <h4 className="mb-1">Custom Solutions</h4>
-                      <p>Tailored AI and ML models for your specific needs</p>
+                      <h4 className="mb-1">Enterprise Solutions</h4>
+                      <p>Bespoke AI and ML models engineered for your unique business challenges</p>
                     </div>
                   </div>
                 </div>

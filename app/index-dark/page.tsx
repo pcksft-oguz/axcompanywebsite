@@ -7,8 +7,6 @@ import ChooseArea from "@/components/containers/HomeTwo/ChooseArea";
 import Team from "@/components/containers/HomeTwo/Team";
 import FaqDark from "@/components/containers/HomeTwo/FaqDark";
 import CaseTwo from "@/components/containers/HomeTwo/CaseTwo";
-import TestimonialDark from "@/components/containers/HomeTwo/TestimonialDark";
-import BlogTwo from "@/components/containers/HomeTwo/BlogTwo";
 import Quote from "@/components/containers/HomeTwo/Quote";
 import FooterTwo from "@/components/layout/footer/FooterTwo";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -26,8 +24,6 @@ const page = () => {
       <Team />
       <FaqDark />
       <CaseTwo />
-      <TestimonialDark />
-      <BlogTwo />
       <Quote />
       <FooterTwo />
       <CustomCursor />

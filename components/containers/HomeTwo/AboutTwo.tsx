@@ -105,11 +105,11 @@ const AboutTwo = () => {
                 data-aos-delay="400"
                 data-aos-duration="1500"
               >
-                At AX Company, we specialize in transforming businesses through cutting-edge 
-                Data Science, Artificial Intelligence, and Machine Learning solutions. Our expert 
-                team of data scientists and AI engineers delivers intelligent systems that extract 
-                valuable insights from your data, automate complex processes, and drive strategic 
-                decision-making for sustainable growth.
+                AX Company is a technology company delivering advanced Data Science, Artificial
+                Intelligence (AI), and Machine Learning (ML) solutions that help organizations
+                accelerate digital transformation. Our team of experienced data scientists and AI
+                engineers builds intelligent systems that turn data into actionable insights,
+                automate complex processes, and support informed decision-making.
               </p>
               <p
                 className=""
@@ -117,9 +117,39 @@ const AboutTwo = () => {
                 data-aos-delay="500"
                 data-aos-duration="1500"
               >
-                UK, Dubai, Azerbaycan ve Türkiye’de faaliyet gösteriyor; kamu kurumları, 
-                büyük ölçekli ve kurumsal yapılarla çalışıyoruz.
+                We work with clients across the UK, Dubai, Azerbaijan, and Turkey, delivering AI
+                and data-driven solutions tailored to local market needs and regulatory
+                environments. Our international project experience enables us to design scalable,
+                reliable, and sustainable systems across diverse industries.
               </p>
+              <div
+                className="about-two__highlights d-grid gap-3"
+                data-aos="fade-up"
+                data-aos-delay="550"
+                data-aos-duration="1500"
+              >
+                <div className="about-two__highlight d-flex gap-3">
+                  <i className="fa-solid fa-check mt-1"></i>
+                  <div>
+                    <strong>International Project Experience</strong>
+                    <p className="mb-0">
+                      Integrated teams deliver AI and data programs across the UK, Dubai,
+                      Azerbaijan, and Turkey with one playbook that scales reliably.
+                    </p>
+                  </div>
+                </div>
+                <div className="about-two__highlight d-flex gap-3">
+                  <i className="fa-solid fa-check mt-1"></i>
+                  <div>
+                    <strong>Public Sector & Enterprise Focus</strong>
+                    <p className="mb-0">
+                      Trusted by public sector institutions, enterprise and large-scale
+                      organizations, and private sector companies to deliver secure, compliant,
+                      mission-critical AI and software solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               className="about-two__right-item "
@@ -129,18 +159,18 @@ const AboutTwo = () => {
             >
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>AI & ML Consulting
+                  <i className="fa-solid fa-check"></i>AI & Machine Learning Consulting
                 </li>
                 <li>
-                  <i className="fa-solid fa-check"></i>Custom Model Development
+                  <i className="fa-solid fa-check"></i>Custom Model & Algorithm Development
                 </li>
               </ul>
               <ul>
                 <li>
-                  <i className="fa-solid fa-check"></i>Data Analytics & Insights
+                  <i className="fa-solid fa-check"></i>Data Analytics & Business Insights
                 </li>
                 <li>
-                  <i className="fa-solid fa-check"></i>Model Training & Optimization
+                  <i className="fa-solid fa-check"></i>Model Training, Optimization & Deployment
                 </li>
               </ul>
             </div>

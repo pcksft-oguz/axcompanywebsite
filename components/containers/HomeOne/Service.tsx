@@ -33,7 +33,7 @@ const Service = () => {
               data-aos-delay="200"
               data-aos-duration="1500"
             >
-              Advanced AI & Data Science Services
+              Enterprise-Grade AI & Data Science Solutions
             </h2>
           </div>
           <Link
@@ -70,7 +70,7 @@ const Service = () => {
                 <Link href="service-details">Data Science</Link>
               </h4>
               <p>
-                Extract valuable insights from your data with advanced analytics, statistical modeling, and predictive algorithms to drive informed business decisions.
+                Unlock the power of your data with cutting-edge analytics, advanced statistical modeling, and sophisticated predictive algorithms that deliver actionable intelligence and drive strategic business outcomes.
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Service = () => {
                 <Link href="service-details">Machine Learning</Link>
               </h4>
               <p>
-                Build intelligent systems that learn from data. We develop custom ML models for automation, prediction, and pattern recognition.
+                Deploy intelligent systems that continuously learn and adapt. We engineer custom machine learning models for advanced automation, precise prediction, and sophisticated pattern recognition.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ const Service = () => {
                 <Link href="service-details">Artificial Intelligence</Link>
               </h4>
               <p>
-                Implement AI solutions including natural language processing, computer vision, and intelligent automation to transform your operations.
+                Deploy enterprise AI solutions powered by advanced natural language processing, cutting-edge computer vision, and intelligent automation that revolutionize your business operations.
               </p>
             </div>
           </div>
