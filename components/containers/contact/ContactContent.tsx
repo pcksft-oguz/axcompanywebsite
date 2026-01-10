@@ -10,10 +10,6 @@ const ContactContent = () => {
           <div className="col-lg-5">
             <div className="contact__left-item primary-bg">
               <h3 className="text-white mb-30">Contact Information</h3>
-              <p className="text-white">
-                Nullam varius, erat quis iaculis dictum, eros urna varius eros,
-                ut blandit felis odio in turpis. Quisque.
-              </p>
               <ul className="mt-40 mb-40">
                 <li>
                   <i>
@@ -69,8 +65,8 @@ const ContactContent = () => {
                   <div>
                     <span className="text-white">Make a Quote</span>
                     <h3 className="mt-1">
-                      <Link className="text-white" href="/">
-                        info@gmail.com
+                      <Link className="text-white" href="mailto:info@axionvate.com">
+                        info@axionvate.com
                       </Link>
                     </h3>
                   </div>
@@ -101,25 +97,13 @@ const ContactContent = () => {
                   <div>
                     <span className="text-white">Location</span>
                     <h3 className="mt-1">
-                      <Link className="text-white" href="tel:+2085550112">
-                        4517 Washington ave.
+                      <Link className="text-white" href="/">
+                        Dubai Silicon Oasis
                       </Link>
                     </h3>
                   </div>
                 </li>
               </ul>
-              <h4 className="text-white mb-20">Follow Social:</h4>
-              <div className="social">
-                <Link href="/">
-                  <i className="fa-brands fa-facebook-f"></i>
-                </Link>
-                <Link href="/">
-                  <i className="fa-brands fa-twitter"></i>
-                </Link>
-                <Link href="/">
-                  <i className="fa-brands fa-linkedin-in"></i>
-                </Link>
-              </div>
             </div>
           </div>
           <div className="col-lg-6">
@@ -142,16 +126,6 @@ const ContactContent = () => {
                 >
                   Ready to Get Started?
                 </h2>
-                <p
-                  data-aos="fade-up"
-                  className=" mt-3"
-                  data-aos-delay="400"
-                  data-aos-duration="1500"
-                >
-                  Nullam varius, erat quis iaculis dictum, eros urna varius
-                  eros, ut blandit felis odio in turpis. Quisque rhoncus, eros
-                  in auctor ultrices,
-                </p>
               </div>
               <div className="contact__form">
                 <form action="#">

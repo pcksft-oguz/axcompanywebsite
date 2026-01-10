@@ -1,14 +1,109 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import ModalVideo from "react-modal-video";
-import One from "@/public/images/service/service-single-image1.jpg";
-import Two from "@/public/images/service/service-single-image2.jpg";
 
-const ServiceSingle = () => {
-  const [imgTab, setImgTab] = useState(0);
-  const [isOpen, setOpen] = useState(false);
+type ServiceSingleProps = {
+  activeSlug?: string;
+};
+
+const ServiceSingle = ({ activeSlug }: ServiceSingleProps) => {
+  const services = [
+    { slug: "big-data", name: "Big Data" },
+    { slug: "machine-learning", name: "Machine Learning" },
+    { slug: "artificial-intelligence", name: "Artificial Intelligence" },
+    { slug: "predictive-analytics", name: "Predictive Analytics" },
+    { slug: "data-science", name: "Data Science" },
+    { slug: "natural-language-processing", name: "Natural Language Processing" },
+  ];
+
+  const serviceContent: Record<string, {
+    title: string;
+    description1: string;
+    description2: string;
+    benefits: string[];
+    conclusion: string;
+  }> = {
+    "big-data": {
+      title: "Big Data Solutions",
+      description1: "Harness the power of massive datasets with our comprehensive Big Data solutions. We help organizations process, store, and analyze petabytes of structured and unstructured data using cutting-edge distributed computing frameworks and cloud-native technologies.",
+      description2: "Our Big Data experts design and implement scalable data pipelines, real-time processing systems, and data lakes that enable your business to extract meaningful insights from vast amounts of information. We work with industry-leading platforms to ensure your data infrastructure is robust, efficient, and future-proof.",
+      benefits: [
+        "Distributed Data Processing (Hadoop, Spark)",
+        "Real-time Stream Processing",
+        "Data Lake Architecture & Implementation",
+        "ETL Pipeline Development",
+        "Big Data Analytics & Visualization"
+      ],
+      conclusion: "We leverage technologies like Apache Hadoop, Apache Spark, Kafka, and cloud platforms (AWS, Azure, GCP) to build scalable Big Data solutions. Our approach focuses on performance optimization, cost efficiency, and seamless integration with your existing systems."
+    },
+    "machine-learning": {
+      title: "Machine Learning Solutions",
+      description1: "Transform your business with intelligent systems that learn and adapt from data. Our Machine Learning services help you automate complex decision-making processes, predict future outcomes, and uncover hidden patterns in your data.",
+      description2: "We develop custom machine learning models tailored to your specific business needs, from supervised learning for classification and regression to unsupervised learning for clustering and anomaly detection. Our ML engineers ensure models are accurate, interpretable, and production-ready.",
+      benefits: [
+        "Custom ML Model Development",
+        "Supervised & Unsupervised Learning",
+        "Feature Engineering & Selection",
+        "Model Training & Hyperparameter Tuning",
+        "MLOps & Model Deployment"
+      ],
+      conclusion: "Using frameworks like scikit-learn, XGBoost, TensorFlow, and PyTorch, we build ML solutions that deliver measurable business impact. Our end-to-end approach includes data preprocessing, model development, validation, deployment, and continuous monitoring."
+    },
+    "artificial-intelligence": {
+      title: "Artificial Intelligence Solutions",
+      description1: "Deploy enterprise-grade AI solutions that revolutionize your business operations. We specialize in developing intelligent systems that can understand, reason, learn, and interact naturally with users through advanced AI technologies.",
+      description2: "Our AI capabilities span natural language processing, computer vision, speech recognition, and intelligent automation. We help organizations implement AI-powered solutions that enhance customer experience, improve operational efficiency, and drive innovation across all business functions.",
+      benefits: [
+        "Natural Language Processing (NLP)",
+        "Computer Vision & Image Recognition",
+        "Conversational AI & Chatbots",
+        "Intelligent Process Automation",
+        "AI Strategy & Consulting"
+      ],
+      conclusion: "We utilize state-of-the-art AI frameworks and pre-trained models from OpenAI, Google, Microsoft, and others. Our AI solutions are designed to be scalable, secure, and compliant with industry regulations while delivering exceptional user experiences."
+    },
+    "predictive-analytics": {
+      title: "Predictive Analytics Solutions",
+      description1: "Anticipate future trends and make proactive decisions with our Predictive Analytics services. We help businesses forecast outcomes, identify risks, and optimize strategies using advanced statistical models and machine learning algorithms.",
+      description2: "Our predictive analytics solutions enable you to forecast customer behavior, predict equipment failures, optimize inventory levels, and identify potential opportunities before they arise. We combine domain expertise with advanced analytics to deliver actionable predictions.",
+      benefits: [
+        "Time Series Forecasting",
+        "Customer Churn Prediction",
+        "Demand Forecasting & Planning",
+        "Risk Assessment & Management",
+        "Predictive Maintenance Solutions"
+      ],
+      conclusion: "We employ advanced techniques including ARIMA, Prophet, LSTM networks, and ensemble methods to build accurate predictive models. Our solutions integrate seamlessly with your BI tools and dashboards for real-time insights and automated decision-making."
+    },
+    "data-science": {
+      title: "Data Science Solutions",
+      description1: "Extract maximum value from your data with comprehensive Data Science services. We combine statistical analysis, machine learning, and domain expertise to solve complex business problems and drive data-driven decision making across your organization.",
+      description2: "Our data scientists work closely with your teams to understand business challenges, explore data, build analytical models, and deliver insights that drive strategic initiatives. From exploratory data analysis to advanced predictive modeling, we provide end-to-end data science solutions.",
+      benefits: [
+        "Exploratory Data Analysis (EDA)",
+        "Statistical Modeling & Hypothesis Testing",
+        "Advanced Analytics & Optimization",
+        "Data Visualization & Storytelling",
+        "A/B Testing & Experimentation"
+      ],
+      conclusion: "We use Python, R, SQL, and modern data science tools to deliver comprehensive analytics solutions. Our approach emphasizes reproducibility, collaboration, and clear communication of complex findings to both technical and non-technical stakeholders."
+    },
+    "natural-language-processing": {
+      title: "Natural Language Processing Solutions",
+      description1: "Unlock insights from unstructured text data with our NLP solutions. We help organizations understand, interpret, and generate human language using advanced natural language processing and understanding technologies.",
+      description2: "Our NLP services enable you to automate document processing, analyze customer sentiment, build intelligent chatbots, extract key information from text, and translate content across languages. We leverage the latest transformer models and neural architectures for superior accuracy.",
+      benefits: [
+        "Text Classification & Sentiment Analysis",
+        "Named Entity Recognition (NER)",
+        "Chatbots & Virtual Assistants",
+        "Document Understanding & Information Extraction",
+        "Machine Translation & Text Generation"
+      ],
+      conclusion: "We utilize cutting-edge NLP models including BERT, GPT, T5, and domain-specific transformers. Our solutions are built on platforms like Hugging Face, spaCy, and NLTK, ensuring high accuracy and performance for your language processing needs."
+    }
+  };
+
+  const content = serviceContent[activeSlug || "big-data"];
+  
   return (
     <>
       <section className="service-single-area pt-120 pb-120">
@@ -16,241 +111,28 @@ const ServiceSingle = () => {
           <div className="row g-4">
             <div className="col-lg-8 order-2 order-lg-1">
               <div className="service-single__left-item">
-                <div className="image mb-50">
-                  <Image src={One} alt="Image" priority />
-                  <div className="service-single__video-btn">
-                    <div
-                      className="video-btn video-pulse "
-                      data-aos="zoom-in"
-                      data-aos-delay="200"
-                      data-aos-duration="1500"
-                    >
-                      <a className="video-popup" onClick={() => setOpen(true)}>
-                        <i className="fa-solid fa-play"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="title mb-30">Data Science & AI Solutions</h3>
+                <h3 className="title mb-30">{content.title}</h3>
                 <p className="mb-20">
-                  Our Data Science and AI services transform your business by extracting 
-                  actionable insights from complex datasets. We leverage advanced machine 
-                  learning algorithms, statistical modeling, and artificial intelligence 
-                  to help you make data-driven decisions that drive growth and innovation.
+                  {content.description1}
                 </p>
                 <p>
-                  Our expert team of data scientists and AI engineers work closely with 
-                  your organization to understand your unique challenges and develop 
-                  customized solutions. From predictive analytics to intelligent automation, 
-                  we deliver scalable AI systems that integrate seamlessly with your existing 
-                  infrastructure and provide measurable business value.
+                  {content.description2}
                 </p>
-                <div className="row g-5 mt-40 mb-40 align-items-center">
-                  <div className="col-lg-5">
+                <div className="row g-5 mt-40 mb-40">
+                  <div className="col-lg-12">
                     <h4 className="mb-20">Benefits With Our Service</h4>
                     <ul>
-                      <li className="mb-15">
-                        <i className="fa-solid fa-check"></i>AI & ML Consulting
-                      </li>
-                      <li className="mb-15">
-                        <i className="fa-solid fa-check"></i>Model Training & Optimization
-                      </li>
-                      <li className="mb-15">
-                        <i className="fa-solid fa-check"></i>Custom ML Model Development
-                      </li>
-                      <li className="mb-15">
-                        <i className="fa-solid fa-check"></i>Data Analytics & Insights
-                      </li>
-                      <li className="mb-15">
-                        <i className="fa-solid fa-check"></i>Continuous Model Monitoring
-                      </li>
+                      {content.benefits.map((benefit, index) => (
+                        <li key={index} className="mb-15">
+                          <i className="fa-solid fa-check"></i>{benefit}
+                        </li>
+                      ))}
                     </ul>
-                  </div>
-                  <div className="col-lg-7">
-                    <div className="image">
-                      <Image src={Two} alt="Image" priority />
-                    </div>
                   </div>
                 </div>
                 <p className="mb-40">
-                  We utilize state-of-the-art technologies including Python, TensorFlow, 
-                  PyTorch, and cloud-based AI platforms to build robust and scalable solutions. 
-                  Our approach combines deep technical expertise with business acumen, ensuring 
-                  that every AI implementation delivers tangible ROI and competitive advantages 
-                  for your organization.
+                  {content.conclusion}
                 </p>
-                <h3 className="title mb-30">Frequently Asked Questions</h3>
-                <p className="mb-30">
-                  Explore common questions about our Data Science and AI services. Our team 
-                  is committed to transparency and helping you understand how our solutions 
-                  can transform your business operations and drive innovation.
-                </p>
-                <div className="accordion" id="accordionExample">
-                  <div
-                    className="accordion-item shadow border-none"
-                    data-aos="fade-down"
-                    data-aos-delay="0"
-                    data-aos-duration="1500"
-                  >
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                        className={
-                          (imgTab == 0 ? "  " : " collapsed") +
-                          " accordion-button"
-                        }
-                        onClick={() => setImgTab(imgTab === 0 ? -1 : 0)}
-                      >
-                        What types of AI and ML models do you develop?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className={`accordion-collapse collapse${
-                        imgTab === 0 ? " show " : ""
-                      }`}
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          We develop a wide range of AI and ML models including predictive 
-                          analytics models, classification systems, recommendation engines, 
-                          natural language processing solutions, computer vision applications, 
-                          and deep learning networks. Each model is customized to your specific 
-                          business needs and data characteristics.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="accordion-item shadow border-none"
-                    data-aos="fade-down"
-                    data-aos-delay="200"
-                    data-aos-duration="1500"
-                  >
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className={
-                          (imgTab == 1 ? "  " : " collapsed") +
-                          " accordion-button"
-                        }
-                        onClick={() => setImgTab(imgTab === 1 ? -1 : 1)}
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        How long does it take to develop a custom ML model?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className={`accordion-collapse collapse${
-                        imgTab === 1 ? " show " : ""
-                      }`}
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          The timeline for developing a custom ML model varies based on 
-                          complexity, data availability, and project requirements. Typically, 
-                          a basic model can be developed in 4-8 weeks, while more complex 
-                          deep learning solutions may take 12-16 weeks. We provide detailed 
-                          project timelines during our initial consultation.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="accordion-item shadow border-none"
-                    data-aos="fade-down"
-                    data-aos-delay="400"
-                    data-aos-duration="1500"
-                  >
-                    <h2 className="accordion-header" id="headingthree">
-                      <button
-                        className={
-                          (imgTab == 2 ? "  " : " collapsed") +
-                          " accordion-button"
-                        }
-                        onClick={() => setImgTab(imgTab === 2 ? -1 : 2)}
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapsethree"
-                        aria-expanded="false"
-                        aria-controls="collapsethree"
-                      >
-                        What is included in your AI services?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapsethree"
-                      className={`accordion-collapse collapse${
-                        imgTab === 2 ? " show " : ""
-                      }`}
-                      aria-labelledby="headingthree"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Our AI services include data analysis and preparation, model 
-                          development and training, deployment and integration, performance 
-                          monitoring, model retraining and optimization, technical documentation, 
-                          and ongoing support. We provide end-to-end solutions from concept 
-                          to production deployment.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="accordion-item shadow border-none"
-                    data-aos="fade-down"
-                    data-aos-delay="600"
-                    data-aos-duration="1500"
-                  >
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className={
-                          (imgTab == 3 ? "  " : " collapsed") +
-                          " accordion-button"
-                        }
-                        onClick={() => setImgTab(imgTab === 3 ? -1 : 3)}
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        Do you provide model maintenance and updates?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className={`accordion-collapse collapse${
-                        imgTab === 3 ? " show " : ""
-                      }`}
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Yes, we offer comprehensive model maintenance and update services. 
-                          This includes continuous performance monitoring, periodic retraining 
-                          with new data, model optimization, and updates to adapt to changing 
-                          business requirements. We ensure your AI solutions remain accurate 
-                          and effective over time.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="col-lg-4 order-1 order-lg-2">
@@ -258,107 +140,12 @@ const ServiceSingle = () => {
                 <div className="item sub-bg mb-30">
                   <h4 className="mb-20">All Services</h4>
                   <ul className="category service-category">
-                    <li>
-                      <Link href="/">Data Science</Link>{" "}
-                      <i className="fa-regular fa-arrow-right-long primary-color"></i>
-                    </li>
-                    <li>
-                      <Link href="/">Machine Learning</Link>{" "}
-                      <i className="fa-regular fa-arrow-right-long primary-color"></i>
-                    </li>
-                    <li className="active">
-                      <Link href="/">Artificial Intelligence</Link>{" "}
-                      <i className="fa-regular fa-arrow-right-long primary-color"></i>
-                    </li>
-                    <li>
-                      <Link href="/">Predictive Analytics</Link>{" "}
-                      <i className="fa-regular fa-arrow-right-long primary-color"></i>
-                    </li>
-                    <li>
-                      <Link href="/">Deep Learning</Link>{" "}
-                      <i className="fa-regular fa-arrow-right-long primary-color"></i>
-                    </li>
-                  </ul>
-                </div>
-                <div className="item sub-bg mb-30">
-                  <h4 className="mb-20">Opening Hours</h4>
-                  <ul className="category">
-                    <li className="secondary-color justify-content-start gap-3">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.8505 9.41291L8.61967 7.73979V4.3316C8.61967 3.98891 8.34266 3.71191 7.99998 3.71191C7.65729 3.71191 7.38029 3.98891 7.38029 4.3316V8.04966C7.38029 8.24485 7.47201 8.42892 7.62817 8.54541L10.1069 10.4044C10.2138 10.485 10.3441 10.5285 10.478 10.5284C10.667 10.5284 10.8529 10.4435 10.9744 10.2799C11.1802 10.0066 11.1244 9.61804 10.8505 9.41291Z"
-                          fill="#3C72FC"
-                        />
-                        <path
-                          d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
-                          fill="#3C72FC"
-                        />
-                      </svg>
-                      Mon - Sat: 10.00 AM - 4.00 PM
-                    </li>
-                    <li className="secondary-color justify-content-start gap-3">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.8505 9.41291L8.61967 7.73979V4.3316C8.61967 3.98891 8.34266 3.71191 7.99998 3.71191C7.65729 3.71191 7.38029 3.98891 7.38029 4.3316V8.04966C7.38029 8.24485 7.47201 8.42892 7.62817 8.54541L10.1069 10.4044C10.2138 10.485 10.3441 10.5285 10.478 10.5284C10.667 10.5284 10.8529 10.4435 10.9744 10.2799C11.1802 10.0066 11.1244 9.61804 10.8505 9.41291Z"
-                          fill="#3C72FC"
-                        />
-                        <path
-                          d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
-                          fill="#3C72FC"
-                        />
-                      </svg>
-                      Sun: 09.00 AM - 4.00 PM
-                    </li>
-                    <li className="secondary-color justify-content-start gap-3">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.8505 9.41291L8.61967 7.73979V4.3316C8.61967 3.98891 8.34266 3.71191 7.99998 3.71191C7.65729 3.71191 7.38029 3.98891 7.38029 4.3316V8.04966C7.38029 8.24485 7.47201 8.42892 7.62817 8.54541L10.1069 10.4044C10.2138 10.485 10.3441 10.5285 10.478 10.5284C10.667 10.5284 10.8529 10.4435 10.9744 10.2799C11.1802 10.0066 11.1244 9.61804 10.8505 9.41291Z"
-                          fill="#3C72FC"
-                        />
-                        <path
-                          d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
-                          fill="#3C72FC"
-                        />
-                      </svg>
-                      Friday: Closed
-                    </li>
-                    <li className="secondary-color justify-content-start gap-3">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M10.8505 9.41291L8.61967 7.73979V4.3316C8.61967 3.98891 8.34266 3.71191 7.99998 3.71191C7.65729 3.71191 7.38029 3.98891 7.38029 4.3316V8.04966C7.38029 8.24485 7.47201 8.42892 7.62817 8.54541L10.1069 10.4044C10.2138 10.485 10.3441 10.5285 10.478 10.5284C10.667 10.5284 10.8529 10.4435 10.9744 10.2799C11.1802 10.0066 11.1244 9.61804 10.8505 9.41291Z"
-                          fill="#3C72FC"
-                        />
-                        <path
-                          d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
-                          fill="#3C72FC"
-                        />
-                      </svg>
-                      Emergency: 24 hours
-                    </li>
+                    {services.map((service) => (
+                      <li key={service.slug} className={activeSlug === service.slug ? "active" : ""}>
+                        <Link href={`/service-details/${service.slug}`}>{service.name}</Link>{" "}
+                        <i className="fa-regular fa-arrow-right-long primary-color"></i>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -366,13 +153,6 @@ const ServiceSingle = () => {
           </div>
         </div>
       </section>
-      <ModalVideo
-        channel="youtube"
-        youtube={{ mute: 0, autoplay: 0 }}
-        isOpen={isOpen}
-        videoId="iVqz_4M5mA0"
-        onClose={() => setOpen(false)}
-      />
     </>
   );
 };

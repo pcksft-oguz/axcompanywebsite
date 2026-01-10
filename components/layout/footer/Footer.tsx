@@ -5,7 +5,7 @@ import Two from "@/public/images/shape/footer-solid-left.png";
 import Three from "@/public/images/shape/footer-regular-right.png";
 import Four from "@/public/images/shape/footer-solid-right.png";
 import Five from "@/public/images/shape/footer-shadow-shape.png";
-import Logo from "@/public/images/logo/logo.svg";
+import Logo from "@/public/images/logo/logo.png";
 
 const Footer = () => {
   return (
@@ -60,20 +60,6 @@ const Footer = () => {
               Leading provider of Data Science, Artificial Intelligence, and Machine Learning 
               solutions. Transform your business with cutting-edge AI technologies.
             </p>
-            <div className="social-icon">
-              <Link href="/">
-                <i className="fa-brands fa-facebook-f"></i>
-              </Link>
-              <Link href="/">
-                <i className="fa-brands fa-twitter"></i>
-              </Link>
-              <Link href="/">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </Link>
-              <Link href="/">
-                <i className="fa-brands fa-youtube"></i>
-              </Link>
-            </div>
           </div>
           <div
             className="footer__item item-sm "
@@ -81,36 +67,36 @@ const Footer = () => {
             data-aos-delay="200"
             data-aos-duration="1500"
           >
-            <h3 className="footer-title">AI Solutions</h3>
+            <h3 className="footer-title">Our Services</h3>
             <ul>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Data
-                  Science
+                <Link href="/service-details/big-data">
+                  <i className="fa-regular fa-angles-right me-1"></i> Big Data
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Machine
-                  Learning
+                <Link href="/service-details/machine-learning">
+                  <i className="fa-regular fa-angles-right me-1"></i> Machine Learning
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Artificial
-                  Intelligence
+                <Link href="/service-details/artificial-intelligence">
+                  <i className="fa-regular fa-angles-right me-1"></i> Artificial Intelligence
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Predictive
-                  Analytics
+                <Link href="/service-details/predictive-analytics">
+                  <i className="fa-regular fa-angles-right me-1"></i> Predictive Analytics
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Deep
-                  Learning
+                <Link href="/service-details/data-science">
+                  <i className="fa-regular fa-angles-right me-1"></i> Data Science
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-details/natural-language-processing">
+                  <i className="fa-regular fa-angles-right me-1"></i> NLP
                 </Link>
               </li>
             </ul>

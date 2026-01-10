@@ -67,7 +67,7 @@ const Service = () => {
                 <Image src={Four} alt="icon" priority />
               </div>
               <h4>
-                <Link href="service-details">Data Science</Link>
+                <Link href="/service-details/big-data">Big Data & Data Science</Link>
               </h4>
               <p>
                 Unlock the power of your data with cutting-edge analytics, advanced statistical modeling, and sophisticated predictive algorithms that deliver actionable intelligence and drive strategic business outcomes.
@@ -94,7 +94,7 @@ const Service = () => {
                 <Image src={Five} alt="icon" priority />
               </div>
               <h4>
-                <Link href="service-details">Machine Learning</Link>
+                <Link href="/service-details/machine-learning">Machine Learning</Link>
               </h4>
               <p>
                 Deploy intelligent systems that continuously learn and adapt. We engineer custom machine learning models for advanced automation, precise prediction, and sophisticated pattern recognition.
@@ -121,7 +121,7 @@ const Service = () => {
                 <Image src={Six} alt="icon" priority />
               </div>
               <h4>
-                <Link href="service-details">Artificial Intelligence</Link>
+                <Link href="/service-details/artificial-intelligence">Artificial Intelligence</Link>
               </h4>
               <p>
                 Deploy enterprise AI solutions powered by advanced natural language processing, cutting-edge computer vision, and intelligent automation that revolutionize your business operations.

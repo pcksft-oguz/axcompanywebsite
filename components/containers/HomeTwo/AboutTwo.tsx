@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import One from "@/public/images/shape/about-two-shape.png";
 import Two from "@/public/images/shape/about-two-dot.png";
@@ -6,7 +5,6 @@ import Three from "@/public/images/shape/about-circle-helper.png";
 import Four from "@/public/images/about/about-two-image1.jpg";
 import Five from "@/public/images/about/about-two-image2.png";
 import Six from "@/public/images/shape/about-two-circle.png";
-import Seven from "@/public/images/about/singature.png";
 
 const AboutTwo = () => {
   return (
@@ -105,7 +103,7 @@ const AboutTwo = () => {
                 data-aos-delay="400"
                 data-aos-duration="1500"
               >
-                AX Company is a technology company delivering advanced Data Science, Artificial
+                AX is a technology company delivering advanced Data Science, Artificial
                 Intelligence (AI), and Machine Learning (ML) solutions that help organizations
                 accelerate digital transformation. Our team of experienced data scientists and AI
                 engineers builds intelligent systems that turn data into actionable insights,
@@ -123,21 +121,11 @@ const AboutTwo = () => {
                 reliable, and sustainable systems across diverse industries.
               </p>
               <div
-                className="about-two__highlights d-grid gap-3"
+                className="about-two__highlights d-grid gap-3 mt-4"
                 data-aos="fade-up"
                 data-aos-delay="550"
                 data-aos-duration="1500"
               >
-                <div className="about-two__highlight d-flex gap-3">
-                  <i className="fa-solid fa-check mt-1"></i>
-                  <div>
-                    <strong>International Project Experience</strong>
-                    <p className="mb-0">
-                      Integrated teams deliver AI and data programs across the UK, Dubai,
-                      Azerbaijan, and Turkey with one playbook that scales reliably.
-                    </p>
-                  </div>
-                </div>
                 <div className="about-two__highlight d-flex gap-3">
                   <i className="fa-solid fa-check mt-1"></i>
                   <div>
@@ -173,17 +161,6 @@ const AboutTwo = () => {
                   <i className="fa-solid fa-check"></i>Model Training, Optimization & Deployment
                 </li>
               </ul>
-            </div>
-            <div
-              className="about__info mt-50 "
-              data-aos="fade-down"
-              data-aos-delay="400"
-              data-aos-duration="1500"
-            >
-              <Link href="about" className="btn-one">
-                About Us <i className="fa-regular fa-arrow-right-long"></i>
-              </Link>
-              <Image src={Seven} alt="singature" priority />
             </div>
           </div>
         </div>

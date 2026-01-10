@@ -5,7 +5,7 @@ import Two from "@/public/images/shape/footer-solid-left.png";
 import Three from "@/public/images/shape/footer-regular-right.png";
 import Four from "@/public/images/shape/footer-solid-right.png";
 import Five from "@/public/images/shape/footer-shadow-shape.png";
-import Logo from "@/public/images/logo/logo.svg";
+import Logo from "@/public/images/logo/logo.png";
 
 const FooterTwo = () => {
   return (
@@ -60,20 +60,6 @@ const FooterTwo = () => {
               Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a
               lacinia curabitur lacinia mollis
             </p>
-            <div className="social-icon">
-              <Link href="/">
-                <i className="fa-brands fa-facebook-f"></i>
-              </Link>
-              <Link href="/">
-                <i className="fa-brands fa-twitter"></i>
-              </Link>
-              <Link href="/">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </Link>
-              <Link href="/">
-                <i className="fa-brands fa-youtube"></i>
-              </Link>
-            </div>
           </div>
           <div
             className="footer__item item-sm "
@@ -81,36 +67,36 @@ const FooterTwo = () => {
             data-aos-delay="200"
             data-aos-duration="1500"
           >
-            <h3 className="footer-title">IT Solution</h3>
+            <h3 className="footer-title">Our Services</h3>
             <ul>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> IT
-                  Management
+                <Link href="/service-details/big-data">
+                  <i className="fa-regular fa-angles-right me-1"></i> Big Data
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> SEO
-                  Optimization
+                <Link href="/service-details/machine-learning">
+                  <i className="fa-regular fa-angles-right me-1"></i> Machine Learning
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Web
-                  Development
+                <Link href="/service-details/artificial-intelligence">
+                  <i className="fa-regular fa-angles-right me-1"></i> Artificial Intelligence
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Cyber
-                  Security
+                <Link href="/service-details/predictive-analytics">
+                  <i className="fa-regular fa-angles-right me-1"></i> Predictive Analytics
                 </Link>
               </li>
               <li>
-                <Link href="service-details">
-                  <i className="fa-regular fa-angles-right me-1"></i> Data
-                  Security
+                <Link href="/service-details/data-science">
+                  <i className="fa-regular fa-angles-right me-1"></i> Data Science
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-details/natural-language-processing">
+                  <i className="fa-regular fa-angles-right me-1"></i> NLP
                 </Link>
               </li>
             </ul>
@@ -141,7 +127,7 @@ const FooterTwo = () => {
         <div className="container">
           <div className="d-flex gap-1 flex-wrap align-items-center justify-content-md-between justify-content-center">
             <p data-aos="fade-down" data-aos-delay="0" data-aos-duration="1500">
-              &copy; All Copyright 2024 by <Link href="/">Gratech</Link>
+              &copy; All Copyright 2024 by <Link href="/">AX Company</Link>
             </p>
             <ul
               className="d-flex align-items-center gap-4 "

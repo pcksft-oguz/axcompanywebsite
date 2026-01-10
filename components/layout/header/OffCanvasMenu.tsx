@@ -1,27 +1,9 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import svgLogo from "@/public/images/logo/logo.png";
 
 const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
-  const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
-
-  const handleSubmenu = (submenu: string) => {
-    if (submenu === openSubMenu) {
-      setOpenSubMenu(null);
-    } else {
-      setOpenSubMenu(submenu);
-    }
-  };
-
-  const isSubMenuOpen = (submenu: string) => {
-    return submenu === openSubMenu ? "sub-menu-active" : " ";
-  };
-
-  const isSubMenuButton = (submenu: string) => {
-    return submenu === openSubMenu ? " drop-active" : " ";
-  };
 
   return (
     <div
@@ -48,43 +30,6 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
             <li>
               <Link href="service">Services</Link>
             </li>
-            <li>
-              <a
-                className={`drop ${isSubMenuButton("pages")}`}
-                onClick={() => handleSubmenu("pages")}
-              >
-                Pages
-              </a>
-              <ul className={`sub-menu ${isSubMenuOpen("pages")}`}>
-                <li>
-                  <Link href="case">Case Study 01</Link>
-                </li>
-                <li>
-                  <Link href="case-2">Case Study 02</Link>
-                </li>
-                <li>
-                  <Link href="case-details">Case Study Details</Link>
-                </li>
-                <li>
-                  <Link href="team">Our Team</Link>
-                </li>
-                <li>
-                  <Link href="team-details">Team Details</Link>
-                </li>
-                <li>
-                  <Link href="pricing">Pricing</Link>
-                </li>
-                <li>
-                  <Link href="faq">FAQ&apos;s</Link>
-                </li>
-                <li>
-                  <Link href="error">404 Error</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link href="contact">Contact</Link>
-            </li>
           </ul>
         </nav>
       </div>
@@ -105,20 +50,6 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
           <Link href="/">info@axionvate.com</Link>
         </li>
       </ul>
-      <div className="social-icon mt-20">
-        <Link href="/">
-          <i className="fa-brands fa-facebook-f"></i>
-        </Link>
-        <Link href="/">
-          <i className="fa-brands fa-twitter"></i>
-        </Link>
-        <Link href="/">
-          <i className="fa-brands fa-linkedin-in"></i>
-        </Link>
-        <Link href="/">
-          <i className="fa-brands fa-youtube"></i>
-        </Link>
-      </div>
       <button
         id="closeButton"
         className="text-white"

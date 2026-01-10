@@ -32,15 +32,15 @@ const ServiceItems = () => {
                   <Image src={One} alt="shape" priority />
                 </div>
                 <h4>
-                  <Link href="service-details" className="primary-hover">
-                    Data Science
+                  <Link href="/service-details/big-data" className="primary-hover">
+                    Big Data
                   </Link>
                 </h4>
                 <p>
                   Extract valuable insights from your data with advanced analytics, 
                   statistical modeling, and predictive algorithms.
                 </p>
-                <Link className="read-more-btn" href="service-details">
+                <Link className="read-more-btn" href="/service-details/big-data">
                   Read More <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
               </div>
@@ -59,7 +59,7 @@ const ServiceItems = () => {
                   <Image src={One} alt="shape" priority />
                 </div>
                 <h4>
-                  <Link href="service-details" className="primary-hover">
+                  <Link href="/service-details/machine-learning" className="primary-hover">
                     Machine Learning
                   </Link>
                 </h4>
@@ -67,7 +67,7 @@ const ServiceItems = () => {
                   Build intelligent systems that learn from data. Custom ML models 
                   for automation, prediction, and pattern recognition.
                 </p>
-                <Link className="read-more-btn" href="service-details">
+                <Link className="read-more-btn" href="/service-details/machine-learning">
                   Read More <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
               </div>
@@ -86,7 +86,7 @@ const ServiceItems = () => {
                   <Image src={One} alt="shape" priority />
                 </div>
                 <h4>
-                  <Link href="service-details" className="primary-hover">
+                  <Link href="/service-details/artificial-intelligence" className="primary-hover">
                     Artificial Intelligence
                   </Link>
                 </h4>
@@ -94,7 +94,7 @@ const ServiceItems = () => {
                   Implement AI solutions including NLP, computer vision, and 
                   intelligent automation to transform operations.
                 </p>
-                <Link className="read-more-btn" href="service-details">
+                <Link className="read-more-btn" href="/service-details/artificial-intelligence">
                   Read More <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
               </div>
@@ -113,7 +113,7 @@ const ServiceItems = () => {
                   <Image src={One} alt="shape" priority />
                 </div>
                 <h4>
-                  <Link href="service-details" className="primary-hover">
+                  <Link href="/service-details/predictive-analytics" className="primary-hover">
                     Predictive Analytics
                   </Link>
                 </h4>
@@ -121,7 +121,7 @@ const ServiceItems = () => {
                   Forecast future trends and behaviors using advanced statistical 
                   models and machine learning algorithms.
                 </p>
-                <Link className="read-more-btn" href="service-details">
+                <Link className="read-more-btn" href="/service-details/predictive-analytics">
                   Read More <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
               </div>
@@ -140,15 +140,15 @@ const ServiceItems = () => {
                   <Image src={One} alt="shape" priority />
                 </div>
                 <h4>
-                  <Link href="service-details" className="primary-hover">
-                    Deep Learning
+                  <Link href="/service-details/data-science" className="primary-hover">
+                    Data Science
                   </Link>
                 </h4>
                 <p>
                   Leverage neural networks and deep learning architectures for 
                   complex pattern recognition and decision-making.
                 </p>
-                <Link className="read-more-btn" href="service-details">
+                <Link className="read-more-btn" href="/service-details/data-science">
                   Read More <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
               </div>
@@ -167,7 +167,7 @@ const ServiceItems = () => {
                   <Image src={One} alt="shape" priority />
                 </div>
                 <h4>
-                  <Link href="service-details" className="primary-hover">
+                  <Link href="/service-details/natural-language-processing" className="primary-hover">
                     Natural Language Processing
                   </Link>
                 </h4>
@@ -175,7 +175,7 @@ const ServiceItems = () => {
                   Process and understand human language with NLP solutions for 
                   chatbots, sentiment analysis, and text mining.
                 </p>
-                <Link className="read-more-btn" href="service-details">
+                <Link className="read-more-btn" href="/service-details/natural-language-processing">
                   Read More <i className="fa-regular fa-arrow-right-long"></i>
                 </Link>
               </div>

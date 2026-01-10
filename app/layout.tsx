@@ -20,6 +20,11 @@ export const metadata: Metadata = {
       name: "AX Company",
     },
   ],
+  icons: {
+    icon: "/images/logo/logo.png",
+    shortcut: "/images/logo/logo.png",
+    apple: "/images/logo/logo.png",
+  },
 };
 
 export default function RootLayout({

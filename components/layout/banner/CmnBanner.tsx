@@ -51,7 +51,7 @@ const CmnBanner = ({ title }: any) => {
           data-aos-delay="200"
           data-aos-duration="1500"
         >
-          <Link href="index">Home</Link>
+          <Link href="/">Home</Link>
           <span>
             <i className="fa-regular fa-angles-right mx-2"></i>
             {title}

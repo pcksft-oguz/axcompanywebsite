@@ -4,8 +4,6 @@ import CmnBanner from "@/components/layout/banner/CmnBanner";
 import AboutTwo from "@/components/containers/HomeTwo/AboutTwo";
 import Offer from "@/components/containers/HomeOne/Offer";
 import Brand from "@/components/containers/HomeOne/Brand";
-import Case from "@/components/containers/HomeOne/Case";
-import Team from "@/components/containers/HomeTwo/Team";
 import Footer from "@/components/layout/footer/Footer";
 import CustomCursor from "@/components/layout/CustomCursor";
 import ScrollProgressButton from "@/components/layout/ScrollProgressButton";
@@ -15,12 +13,10 @@ const page = () => {
     <div>
       <TopHeader />
       <Header />
-      <CmnBanner title="About AX Company" />
+      <CmnBanner title="About AX " />
       <AboutTwo />
       <Offer />
       <Brand />
-      <Case />
-      <Team />
       <Footer />
       <CustomCursor />
       <ScrollProgressButton />
