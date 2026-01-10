@@ -14,10 +14,6 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
       <Link href="/" className="logo mb-40">
         <Image src={svgLogo} alt="logo" style={{ height: '42px', width: 'auto' }} />
       </Link>
-      <div className="sidebar__search mb-30">
-        <input type="text" placeholder="Search..." />
-        <i className="fa-regular fa-magnifying-glass"></i>
-      </div>
       <div className="mobile-menu overflow-hidden">
         <nav className="mean-nav">
           <ul>

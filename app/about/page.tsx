@@ -13,7 +13,7 @@ const page = () => {
     <div>
       <TopHeader />
       <Header />
-      <CmnBanner title="About AX " />
+      <CmnBanner title="About AX" />
       <AboutTwo />
       <Offer />
       <Brand />
