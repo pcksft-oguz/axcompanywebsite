@@ -4,12 +4,12 @@ import One from "@/public/images/banner/inner-banner-shape2.png";
 import Two from "@/public/images/banner/inner-banner-shape1.png";
 import Three from "@/public/images/banner/inner-banner-shape3.png";
 
-const CmnBanner = ({ title }: any) => {
+const CmnBanner = ({ title, backgroundImage }: any) => {
   return (
     <section
       className="banner__inner-page bg-image pt-180 pb-180 bg-image"
       style={{
-        backgroundImage: "url(/images/banner/banner-inner-page.jpg)",
+        backgroundImage: `url(${backgroundImage || "/images/banner/banner-inner-page.jpg"})`,
       }}
     >
       <div

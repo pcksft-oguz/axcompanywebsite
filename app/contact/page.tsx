@@ -11,7 +11,7 @@ const page = () => {
     <div>
       <TopHeader />
       <Header />
-      <CmnBanner title="Contact Us" />
+      <CmnBanner title="Contact Us" backgroundImage="/images/contact/contactt.png" />
       <ContactContent />
       <Footer />
       <CustomCursor />

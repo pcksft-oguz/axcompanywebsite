@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import One from "@/public/images/shape/service-two-item-shape.png";
-import Two from "@/public/images/service/service-image1.jpg";
-import Three from "@/public/images/service/service-image2.jpg";
-import Four from "@/public/images/service/service-image3.jpg";
-import Five from "@/public/images/service/service-image4.jpg";
-import Six from "@/public/images/service/service-image5.jpg";
-import Seven from "@/public/images/service/service-image6.jpg";
+import Two from "@/public/images/services/1.png";
+import Three from "@/public/images/services/2.png";
+import Four from "@/public/images/services/3.png";
+import Five from "@/public/images/services/4.png";
+import Six from "@/public/images/services/5.png";
+import Seven from "@/public/images/services/6.png";
 import Eight from "@/public/images/icon/service-two-icon1.png";
 import Nine from "@/public/images/icon/service-two-icon2.png";
 import Ten from "@/public/images/icon/service-two-icon3.png";
@@ -22,11 +22,11 @@ const ServiceItems = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-two__item">
               <div className="image">
-                <Image src={Two} alt="Image" priority />
+                <Image src={Two} alt="Big Data Analytics Solutions" priority />
               </div>
               <div className="service-two__content">
                 <div className="icon">
-                  <Image src={Eight} alt="icon" priority />
+                  <Image src={Eight} alt="Big Data icon" priority />
                 </div>
                 <div className="shape">
                   <Image src={One} alt="shape" priority />
@@ -49,11 +49,11 @@ const ServiceItems = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-two__item">
               <div className="image">
-                <Image src={Three} alt="Image" priority />
+                <Image src={Three} alt="Machine Learning Solutions" priority />
               </div>
               <div className="service-two__content">
                 <div className="icon">
-                  <Image src={Nine} alt="icon" priority />
+                  <Image src={Nine} alt="Machine Learning icon" priority />
                 </div>
                 <div className="shape">
                   <Image src={One} alt="shape" priority />
@@ -76,11 +76,11 @@ const ServiceItems = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-two__item">
               <div className="image">
-                <Image src={Four} alt="Image" priority />
+                <Image src={Four} alt="Artificial Intelligence Solutions" priority />
               </div>
               <div className="service-two__content">
                 <div className="icon">
-                  <Image src={Ten} alt="icon" priority />
+                  <Image src={Ten} alt="Artificial Intelligence icon" priority />
                 </div>
                 <div className="shape">
                   <Image src={One} alt="shape" priority />
@@ -103,11 +103,11 @@ const ServiceItems = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-two__item">
               <div className="image">
-                <Image src={Five} alt="Image" priority />
+                <Image src={Five} alt="Predictive Analytics Solutions" priority />
               </div>
               <div className="service-two__content">
                 <div className="icon">
-                  <Image src={Eleven} alt="icon" priority />
+                  <Image src={Eleven} alt="Predictive Analytics icon" priority />
                 </div>
                 <div className="shape">
                   <Image src={One} alt="shape" priority />
@@ -130,11 +130,11 @@ const ServiceItems = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-two__item">
               <div className="image">
-                <Image src={Six} alt="Image" priority />
+                <Image src={Six} alt="Data Science Solutions" priority />
               </div>
               <div className="service-two__content">
                 <div className="icon">
-                  <Image src={Twelve} alt="icon" priority />
+                  <Image src={Twelve} alt="Data Science icon" priority />
                 </div>
                 <div className="shape">
                   <Image src={One} alt="shape" priority />
@@ -157,11 +157,11 @@ const ServiceItems = () => {
           <div className="col-lg-4 col-md-6">
             <div className="service-two__item">
               <div className="image">
-                <Image src={Seven} alt="Image" priority />
+                <Image src={Seven} alt="Natural Language Processing Solutions" priority />
               </div>
               <div className="service-two__content">
                 <div className="icon">
-                  <Image src={Thirteen} alt="icon" priority />
+                  <Image src={Thirteen} alt="Natural Language Processing icon" priority />
                 </div>
                 <div className="shape">
                   <Image src={One} alt="shape" priority />

@@ -2,8 +2,7 @@ import Image from "next/image";
 import One from "@/public/images/shape/about-two-shape.png";
 import Two from "@/public/images/shape/about-two-dot.png";
 import Three from "@/public/images/shape/about-circle-helper.png";
-import Four from "@/public/images/about/about-two-image1.jpg";
-import Five from "@/public/images/about/about-two-image2.png";
+import Four from "@/public/images/about/side-aboutt.png";
 import Six from "@/public/images/shape/about-two-circle.png";
 
 const AboutTwo = () => {
@@ -38,10 +37,7 @@ const AboutTwo = () => {
                 />
               </div>
               <div className="image big-image">
-                <Image src={Four} alt="Image" priority />
-              </div>
-              <div className="image sm-image">
-                <Image src={Five} alt="Image" priority />
+                <Image src={Four} alt="AI and Data Science Solutions - Global Technology Network" priority />
               </div>
               <div className="circle-shape">
                 <Image

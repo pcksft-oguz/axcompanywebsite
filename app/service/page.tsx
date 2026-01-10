@@ -11,7 +11,7 @@ const page = () => {
     <div>
       <TopHeader />
       <Header />
-      <CmnBanner title="AI & ML Services" />
+      <CmnBanner title="AI & ML Services" backgroundImage="/images/service/servicess.png" />
       <ServiceItems />
       <Footer />
       <CustomCursor />

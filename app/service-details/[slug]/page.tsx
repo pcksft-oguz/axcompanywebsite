@@ -51,7 +51,7 @@ const page = ({ params }: PageProps) => {
     <div>
       <TopHeader />
       <Header />
-      <CmnBanner title={service.title} />
+      <CmnBanner title={service.title} backgroundImage="/images/service/servicess.png" />
       <ServiceSingle activeSlug={params.slug} />
       <Footer />
       <CustomCursor />

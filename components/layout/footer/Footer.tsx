@@ -54,7 +54,7 @@ const Footer = () => {
             data-aos-duration="1500"
           >
             <Link href="/" className="logo mb-30">
-              <Image src={Logo} alt="Image" priority />
+              <Image src={Logo} alt="AX Company Logo" priority />
             </Link>
             <p>
               Leading provider of Data Science, Artificial Intelligence, and Machine Learning 

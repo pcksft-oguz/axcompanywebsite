@@ -33,7 +33,7 @@ const Header = () => {
         <div className="container header__container">
           <div className="header__main">
             <Link href="/" className="logo">
-              <Image src={logo} alt="logo" style={{ height: '42px', width: 'auto' }} />
+              <Image src={logo} alt="AX Company - AI & Data Science Solutions" style={{ height: '42px', width: 'auto' }} />
             </Link>
             <div className="main-menu d-none d-lg-block">
               <nav>

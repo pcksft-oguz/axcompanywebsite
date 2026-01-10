@@ -12,7 +12,7 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
     >
       <div className="sidebar__overlay"></div>
       <Link href="/" className="logo mb-40">
-        <Image src={svgLogo} alt="logo" style={{ height: '42px', width: 'auto' }} />
+        <Image src={svgLogo} alt="AX Company - AI & Data Science Solutions" style={{ height: '42px', width: 'auto' }} />
       </Link>
       <div className="mobile-menu overflow-hidden">
         <nav className="mean-nav">
@@ -28,6 +28,11 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
             </li>
           </ul>
         </nav>
+      </div>
+      <div className="mt-4 mb-3">
+        <Link href="/contact" className="btn-one w-100 text-center">
+          Contact <i className="fa-regular fa-arrow-right-long"></i>
+        </Link>
       </div>
       <ul className="info pt-40">
         <li>
