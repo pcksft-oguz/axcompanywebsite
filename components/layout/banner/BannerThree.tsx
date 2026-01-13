@@ -1,12 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ModalVideo from "react-modal-video";
 import One from "@/public/images/bg/banner-three-bg.png";
 import Two from "@/public/images/banner/banner-three-left-shape.png";
 import Three from "@/public/images/banner/banner-three-right-shape.png";
 import Four from "@/public/images/banner/banner-three-image.png";
+
+// Lazy load Modal Video component for better performance
+const ModalVideo = lazy(() => import("react-modal-video"));
 
 const BannerThree = () => {
   const [isOpen, setOpen] = useState(false);
@@ -111,13 +113,17 @@ const BannerThree = () => {
           </div>
         </div>
       </div>
-      <ModalVideo
-        channel="youtube"
-        youtube={{ mute: 0, autoplay: 0 }}
-        isOpen={isOpen}
-        videoId="iVqz_4M5mA0"
-        onClose={() => setOpen(false)}
-      />
+      {isOpen && (
+        <Suspense fallback={<div />}>
+          <ModalVideo
+            channel="youtube"
+            youtube={{ mute: 0, autoplay: 0 }}
+            isOpen={isOpen}
+            videoId="iVqz_4M5mA0"
+            onClose={() => setOpen(false)}
+          />
+        </Suspense>
+      )}
     </>
   );
 };

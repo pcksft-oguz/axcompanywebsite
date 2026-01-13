@@ -98,7 +98,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload Font Awesome for better performance */}
+        {/* DNS Prefetch for external resources */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
+        {/* Preload critical Font Awesome resources */}
         <link
           rel="preload"
           href="/icons/css/all.min.css"
@@ -111,6 +115,9 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        
+        {/* Resource hints for better performance */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={kumbhSans.className}>
         <StructuredData />

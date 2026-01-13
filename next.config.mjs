@@ -19,6 +19,13 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true, // CSS minification
+    optimizePackageImports: ['swiper', 'react-modal-video', 'aos', 'bootstrap'], // Tree-shake heavy packages
+  },
+  // Production source maps disabled for faster builds and smaller size
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;

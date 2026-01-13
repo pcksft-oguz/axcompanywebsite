@@ -37,7 +37,7 @@ CSS TABLE OF CONTENTS
 // font awesome 6
 @import "@/public/icons/css/all.min.css";
 
-// modal video
+// modal video (keeping it global for TypeScript compatibility, but lazy loading component)
 @import "~react-modal-video/scss/modal-video.scss";
 
 // Google Fonts now loaded via Next.js font optimization in layout.tsx

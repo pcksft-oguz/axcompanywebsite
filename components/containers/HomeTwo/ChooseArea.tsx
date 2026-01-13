@@ -1,13 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import Image from "next/image";
-import ModalVideo from "react-modal-video";
 import One from "@/public/images/shape/choose-shape-right.png";
 import Two from "@/public/images/shape/choose-shape-right2.png";
 import Three from "@/public/images/shape/choose-shape-left.png";
 import Four from "@/public/images/choose/choose-image1.png";
 import Five from "@/public/images/icon/about-icon1.png";
 import Six from "@/public/images/icon/about-icon2.png";
+
+// Lazy load Modal Video component for better performance
+const ModalVideo = lazy(() => import("react-modal-video"));
 
 const ChooseArea = () => {
   const [isOpen, setOpen] = useState(false);
@@ -32,7 +34,7 @@ const ChooseArea = () => {
           data-aos-delay="200"
           data-aos-duration="1500"
         >
-          <Image src={One} alt="shape" priority />
+          <Image src={One} alt="shape" loading="lazy" />
         </div>
         <div
           className="choose__shape-right2 d-none d-lg-block"
@@ -40,16 +42,16 @@ const ChooseArea = () => {
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          <Image src={Two} alt="shape" priority />
+          <Image src={Two} alt="shape" loading="lazy" />
         </div>
         <div className="choose__shape-left sway__animation">
-          <Image src={Three} alt="shape" priority />
+          <Image src={Three} alt="shape" loading="lazy" />
         </div>
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-6 d-block d-lg-none">
               <div className="image">
-                <Image src={Four} alt="Image" priority />
+                <Image src={Four} alt="Image" loading="lazy" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -106,7 +108,7 @@ const ChooseArea = () => {
                 <div className="col-md-6">
                   <div className="about__right-item">
                     <div className="icon">
-                      <Image src={Five} alt="icon" priority />
+                      <Image src={Five} alt="icon" loading="lazy" />
                     </div>
                     <div className="content">
                       <h4 className="mb-1">Best Services</h4>
@@ -117,7 +119,7 @@ const ChooseArea = () => {
                 <div className="col-md-6">
                   <div className="about__right-item">
                     <div className="icon">
-                      <Image src={Six} alt="icon" priority />
+                      <Image src={Six} alt="icon" loading="lazy" />
                     </div>
                     <div className="content">
                       <h4 className="mb-1">24/7 Call Support</h4>
@@ -179,19 +181,23 @@ const ChooseArea = () => {
             </div>
             <div className="col-lg-6 d-none d-lg-block">
               <div className="choose__image image">
-                <Image src={Four} alt="Image" priority />
+                <Image src={Four} alt="Image" loading="lazy" />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <ModalVideo
-        channel="youtube"
-        youtube={{ mute: 0, autoplay: 0 }}
-        isOpen={isOpen}
-        videoId="iVqz_4M5mA0"
-        onClose={() => setOpen(false)}
-      />
+      {isOpen && (
+        <Suspense fallback={<div />}>
+          <ModalVideo
+            channel="youtube"
+            youtube={{ mute: 0, autoplay: 0 }}
+            isOpen={isOpen}
+            videoId="iVqz_4M5mA0"
+            onClose={() => setOpen(false)}
+          />
+        </Suspense>
+      )}
     </>
   );
 };
