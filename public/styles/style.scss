@@ -40,7 +40,7 @@ CSS TABLE OF CONTENTS
 // modal video
 @import "~react-modal-video/scss/modal-video.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+// Google Fonts now loaded via Next.js font optimization in layout.tsx
 
 // Abstracts styles ***
 @import "_abstracts/_mixins";

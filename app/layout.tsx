@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
+import { Kumbh_Sans } from 'next/font/google';
 import "@/public/styles/style.scss";
 import InitAnimations from "@/components/layout/InitAnimations";
 import StructuredData from "@/components/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+
+// Optimize Google Fonts with Next.js
+const kumbhSans = Kumbh_Sans({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-kumbh',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://axionvate.com'),
@@ -88,7 +97,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        {/* Preload Font Awesome for better performance */}
+        <link
+          rel="preload"
+          href="/icons/css/all.min.css"
+          as="style"
+        />
+        <link
+          rel="preload"
+          href="/icons/webfonts/fa-solid-900.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body className={kumbhSans.className}>
         <StructuredData />
         <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         {children}
